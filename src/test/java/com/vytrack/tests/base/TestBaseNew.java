@@ -18,6 +18,18 @@ public abstract class TestBaseNew {
     private static final String usernameStore2 = ConfigurationReader.getProperty("username5");
 
 
+    @DataProvider(name = "allManagers")
+    public Object[][] allManagers() {
+        return new Object[][]{
+                {usernameSale1},
+                {usernameSale2},
+                {usernameStore1},
+                {usernameStore2}
+
+        };
+    }
+
+
     @DataProvider(name = "salesManagers")
     public Object[][] salesManagers() {
         return new Object[][]{
@@ -54,7 +66,7 @@ public abstract class TestBaseNew {
 
 
     @AfterMethod
-    public void tearDown () {
+    public void tearDown() {
         Driver.closeDriver();
 
     }

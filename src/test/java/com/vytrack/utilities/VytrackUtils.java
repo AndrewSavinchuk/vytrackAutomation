@@ -64,6 +64,20 @@ public class VytrackUtils {
     // METHODS FOR USERS USING DATA PROVIDER//
     ///////////////////////////////////////////
 
+
+    public static void loginAsAllManagers(String username) {
+        //go to website
+        Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
+        //pass username
+        Driver.getDriver().findElement(By.id("prependedInput")).sendKeys(username);
+        //pass password
+        Driver.getDriver().findElement(By.id("prependedInput2")).sendKeys(password);
+        // click login button
+        Driver.getDriver().findElement(By.xpath("//button[@id='_submit']")).click();
+
+    }
+
+
     public static void loginAsDriver(String username) {
         //go to website
         Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
@@ -91,6 +105,8 @@ public class VytrackUtils {
         Driver.getDriver().findElement(By.xpath("//button[@id='_submit']")).click();
 
     }
+
+
 
     public static void loginAsSalesManager(String username) {
         //go to website
