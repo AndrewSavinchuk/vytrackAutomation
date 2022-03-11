@@ -60,6 +60,13 @@ public class VytrackUtils {
         Driver.getDriver().findElement(By.tagName("button")).click();
     }
 
+    
+    
+     ///////////////////////////////////////////
+     // METHODS FOR USERS USING DATA PROVIDER///
+    ///////////////////////////////////////////
+    
+    
 
     public static void loginAsDriver(String username) {
         //go to website
