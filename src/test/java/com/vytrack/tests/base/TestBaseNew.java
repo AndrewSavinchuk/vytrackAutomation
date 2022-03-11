@@ -53,6 +53,13 @@ public abstract class TestBaseNew {
     }
 
 
+    @AfterMethod
+    public void tearDown () {
+        Driver.closeDriver();
+
+    }
+
+
     @AfterClass
     public void afterClass() {
         Driver.closeDriver();
