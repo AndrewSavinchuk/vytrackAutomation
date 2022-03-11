@@ -2,15 +2,11 @@ package com.vytrack.tests.base;
 
 import com.vytrack.utilities.ConfigurationReader;
 import com.vytrack.utilities.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+
 import org.testng.annotations.*;
 
-import java.util.List;
-import java.util.Random;
 
-public abstract class TestBase {
+public abstract class TestBaseNew {
 
     private static final String usernameDr1 = ConfigurationReader.getProperty("username1");
     private static final String usernameDr2 = ConfigurationReader.getProperty("username4");
@@ -56,20 +52,11 @@ public abstract class TestBase {
         Driver.getDriver().get(ConfigurationReader.getProperty("env1"));
     }
 
-//    @AfterMethod
-//    public void afterMethod(){
-//        Driver.getDriver().findElement(By.xpath("//*[@id=\"user-menu\"]/a")).click();
-//        Driver.getDriver().findElement(By.xpath("//a[@class='no-hash']")).click();
-//    }
 
     @AfterClass
     public void afterClass() {
         Driver.closeDriver();
     }
-
-
-
-
 
 
 }
