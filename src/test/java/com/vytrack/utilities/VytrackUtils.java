@@ -61,7 +61,7 @@ public class VytrackUtils {
     }
 
     ///////////////////////////////////////////
-    // METHODS FOR USERS USING DATA PROVIDER///
+    // METHODS FOR USERS USING DATA PROVIDER//
     ///////////////////////////////////////////
 
     public static void loginAsDriver(String username) {
